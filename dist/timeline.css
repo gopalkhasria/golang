@@ -1,0 +1,42 @@
+.wrrapper-timeline {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.timeline {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.5s ease;
+    min-height: 300px;
+}
+
+.year {
+    border-bottom: 5px solid white;
+    border-top: 5px solid white;
+    padding: 1rem 0;
+    cursor: pointer;
+    margin: 2rem 0;
+}
+
+.timeline:hover {
+    width: 40%;
+    background-color: #161616;
+    transition: width 0.5s ease;
+}
+
+.des {
+    display: none;
+    transition: width 0.5s ease;
+    font-size: 1.5rem;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+.timeline:hover .des {
+    display: block;
+    transition: width 0.5s ease;
+}

@@ -356,3 +356,10 @@ section.has-light-background, section.has-light-background h1, section.has-light
     background-color: var(--r-background-color);
   }
 }
+
+.fragment.blur {
+  filter: blur(5px);
+}
+.fragment.blur.visible {
+  filter: none;
+}

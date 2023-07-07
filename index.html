@@ -1,40 +1,145 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>Golang</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/timeline.css">
+	<link rel="stylesheet" href="dist/theme/night.css">
+
+	<link rel="shortcut icon" href="images/golang-1.svg" type="image/x-icon">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-auto-animate>
+				<h2>Golang</h2>
+			</section>
+			<section data-auto-animate>
+				<h2>Golang</h2>
+				<h4>Linguaggio di programmazione open source che semplifica la creazione di sistemi sicuri e scalabili.
+				</h4>
+			</section>
+			<section>
+				<section>
+					<div class="wrrapper-timeline">
+						<div class="timeline">
+							<div class="year">2007</div>
+							<div class="des">
+								Nasce l'idea di creare un linguaggio in google per migliorare la produttività
+							</div>
+						</div>
+						<div class="timeline">
+							<div class="year">2009</div>
+							<div class="des">
+								Viene rilasciata al pubblico
+							</div>
+						</div>
+						<div class="timeline">
+							<div class="year">2012</div>
+							<div class="des">
+								Viene rilasciata la versione 1.0
+							</div>
+						</div>
+						<div class="timeline">
+							<div class="year">2022</div>
+							<div class="des">
+								Viene rilasciata la versione 1.18 con il supporto di generics
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="r-stack">
+						<img class="fragment fade-out" data-fragment-index="0" src="images/docker.svg" width="450"
+							height="300">
+						<img class="fragment current-visible" data-fragment-index="0" src="images/kubernetes.svg"
+							width="450" height="300">
+						<img class="fragment" src="images/twitch-logo-2019.svg" width="450" height="300">
+					</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					<p class="fragment custom blur">Fortemente tipizzato</p>
+					<p class="fragment custom blur">Garbage collector (niente malloc o free ) </p>
+					<p class="fragment custom blur">Goroutines e channels</p>
+					<p class="fragment custom blur">Compilazione efficiente</p>
+					<p class="fragment custom blur">Importare packages (librerie) esterne</p>
+				</section>
+				<section data-auto-animate>
+					<h3>Standard Library in Go</h3>
+				</section>
+				<section data-auto-animate>
+					<h3>Standard Library in Go</h3>
+					<h4>Insieme di packages di cui viene garantita la retro-compatibilità</h4>
+				</section>
+			</section>
+			<section data-transition="convex">
+				<p>Basic types</p>
+				<ul>
+					<li>bool</li>
+					<li>int, uint, int8....</li>
+					<li>string</li>
+					<li>float</li>
+				</ul>
+			</section>
+			<section data-transition="concave">
+				<section>
+					<p>Hello world</p>
+					<pre><code data-line-numbers="2|3-6|7|8|9-11">
+						package main
+						import (
+							"log"
+							"fmt"
+						)
+						func main(){
+							log.Println("Hello world\n")
+							name := "Gente"
+							fmt.Printf("Hello,\n%q!", "Gente")
+						}	
+					</code></pre>
+				</section>
+				<section>
+					<pre>
+						<code>
+							Hello world
+							Hello
+							Gente
+						</code>
+					</pre>
+				</section>
+			</section>
+			<section data-transition="zoom">
+				Time to code
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
